@@ -1,0 +1,30 @@
+Cars
+
+rentalType(Primary Key) string
+pricePerDay	(decimal)
+quantity	(int)
+
+Rentals
+
+id (int)	
+carsType (Foreign) (string)
+CustomerName	(string)
+numOfDays	(int)
+priceTotal	(decimal)
+
+----------------------
+
+HomePage (Malek)
+- Rentals Available
+- Button to link to Renting Form
+- About section
+
+Rental Form (Jessica)
+- Rentals registration
+- Submit to summary
+
+SummaryPage(Jessica)
+- summarizes rental
+
+ContactForm
+-send to email
