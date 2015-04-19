@@ -68,7 +68,7 @@
       <!-- main body -->
       <div class="content">
         <h2>Please complete the form below:</h2>
-        <form action="#" method="post">
+        <form name="rental" action="processRental.php" method="post">
           <div class="form_settings">
          	<p><span>First Name</span><input type="text" name="firstName" value="" /></p>
             <p><span>Last Name</span><input type="text" name="lastName" value="" /></p>
