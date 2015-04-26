@@ -1,8 +1,7 @@
 
 	<div class="content">
       <h2>Please complete the form below:</h2>
-      
-         <form name="rentalform" action="processRental.php" method="post">
+         <form name="rentalform" action="index.php?page=rentalform" method="post">
           <div class="form_settings">
          	<p><span>First Name</span><input type="text" name="fname" /></p>
             <p><span>Last Name</span><input type="text" name="lname" /></p>
@@ -16,9 +15,29 @@
             <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="submit" value="submit" /></p>
           </div>
         </form>
-        </div>
+        
+        <?php 
+			if(isset($_POST['submit'])){
+				$firstName = $_POST['fname'];
+				$lastName = $_POST['lname'];
+				$phoneNumber = $_POST['phonenumber'];
+				$isComplete = FieldComplete($firstName, $lastName, $phoneNumber);
+				if(!$isComplete){
+						echo "<font color='red'>Please complete all fields.</font>";
+				}
+				
+			
+			}
+		
+		function FieldComplete($firstName, $lastName, $phoneNumber) {
+			if (isset($firstName, $lastName,$phoneNumber) &&
+					$firstName && $lastName && $phoneNumber == "" || " ") {
+						return false;
+					} else {
+						return true;
+					}
+		}
+	?>
 
-	
-
-  
+  </div>
   

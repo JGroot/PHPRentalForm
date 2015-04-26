@@ -1,5 +1,6 @@
 <?php
 	//this is the master page
+	include 'dbconn.php';
 	include 'includes/header.html';
 	include 'includes/sidebar.html';
 	
