@@ -3,7 +3,3 @@
        
         
      </div>
-    </div>
-    <div id="scroll">
-      <a title="Scroll to the top" class="top" href="#"><img src="Styles/images/top.png" alt="top" /></a>
-    </div>
