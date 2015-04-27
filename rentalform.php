@@ -6,9 +6,25 @@
          	<p><span>First Name</span><input type="text" name="fname" /></p>
             <p><span>Last Name</span><input type="text" name="lname" /></p>
             <p><span>Phone Number</span><input type="text" name="phonenumber" value="###-###-####" /></p>
-          	
-           <!-- populate the dropdown list from db on load if possible -->
-            <p><span>Vehicle</span><select id="vehicletype" name="vehicleType"><option value="1"></option><option value="2"></option><option value="3"></option></select></p>
+			 <!-- populate the dropdown list from db on load -->
+			 <?php 
+       			 $queryCars = mysql_query("SELECT rentalType FROM 'cars'");
+       			
+     		 ?>
+            <p><span>Vehicle</span><select id="vehicletype" name="vehicleType">
+			<?php
+				
+            	while($row = mysqli_fetch_array($queryCars))
+            	{
+            		
+            
+            	     echo '<option values=' . $row["rentalType"] . '>' . $row["rentalType"] . '</option>';
+            	     
+            	
+            	     
+            	}
+            ?>
+     		</select></p>
             <p><span>Purchase insurance?</span>
             <span>yes  <input class="checkbox" type="checkbox" name="insuranceYes" value="yes" /></span>
             <span>no  <input class="checkbox" type="checkbox" name="insuranceNo" value="no" /></span></p>
