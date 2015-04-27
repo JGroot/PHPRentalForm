@@ -143,7 +143,7 @@ ol li {
 
 
 header { 
-  background: #444 url(../images/logo.jpg) no-repeat;
+  background: #444 url(../images/Cars.jpg) no-repeat;
   height: 240px;
 }
 
@@ -174,22 +174,22 @@ header {
 
 #logo_text h1, #logo_text h1 a, #logo_text h1 a:hover { 
   padding: 0;
-  color: #3092B6;
+  color: #ffffff;
   text-decoration: none;
 }
 
 #logo_text h1 a .logo_colour { 
-  color: #09D4FF;
+  color: #00eaea;
 }
 
 #logo_text a:hover .logo_colour { 
-  color: #3092B6;
+  color: #333333;
 }
 
 #logo_text h2 { 
   font-size: 140%;
   padding: 0 0 0 0;
-  color: #3480FA;
+  color: #2e2e2e;
 }
 
 nav { 
@@ -286,10 +286,10 @@ footer {
   height: 125px;
   padding: 28px 0 5px 0;
   text-align: center; 
-  background: #3092B6;
+  background: #2a2a2a;
   color: #FFF;
   margin: 0;
-  border-top: 6px solid #58B5D6;
+  border-top: 6px solid #464646;
 }
 
 footer p { 
@@ -341,7 +341,7 @@ footer a:hover {
   height: 33px;
   padding: 2px 0 3px 0;
   cursor: pointer; 
-  background: #3092B6;
+  background: #00d5d5;
   color: #FFF;
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
@@ -537,4 +537,5 @@ ul#nav li a {
 ul#nav li a:hover,ul#nav li a:focus { 
   color: #FFF;
   text-decoration: underline;
+  color: #00ffff;
 }
