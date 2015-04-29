@@ -7,22 +7,20 @@
             <p><span>Last Name</span><input type="text" name="lname" /></p>
             <p><span>Phone Number</span><input type="text" name="phonenumber" value="###-###-####" /></p>
 			 <!-- populate the dropdown list from db on load -->
-			 <?php 
-       			 $queryCars = mysql_query("SELECT rentalType FROM 'cars'");
-       			
-     		 ?>
-            <p><span>Vehicle</span><select id="vehicletype" name="vehicleType">
+			
+            <p><span>Vehicle</span>
+            <select id="vehicletype" name="vehicleType">
 			<?php
 				
-            	while($row = mysqli_fetch_array($queryCars))
+				$queryCars = 'SELECT * FROM Cars';
+				$result = mysql_query($queryCars, $conn);
+				if (!$result)
+					die("Could not get results: " . mysql_error());
+            	while($records = mysql_fetch_array($result, MYSQL_ASSOC))
             	{
-            		
-            
-            	     echo '<option values=' . $row["rentalType"] . '>' . $row["rentalType"] . '</option>';
-            	     
-            	
-            	     
+            		echo "<option value='{$records['rentalType']}'>{$records['rentalType']}</option>";
             	}
+            	mysql_close($conn);
             ?>
      		</select></p>
             <p><span>Purchase insurance?</span>

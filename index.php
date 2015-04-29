@@ -1,9 +1,9 @@
 <?php
 	//this is the master page
-	include 'dbconn.php';
+	
 	include 'includes/header.html';
 	include 'includes/sidebar.html';
-	
+	include 'dbconn.php';
 	//When adding a new page, include it here
 	if($_GET['page'] == "rentalform"){
 		include 'rentalform.php';
