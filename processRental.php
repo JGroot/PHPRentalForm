@@ -5,10 +5,11 @@
 				$lastName = $_POST['lname'];
 				$phoneNumber = $_POST['phonenumber'];
 				$isValid =  Validation($firstName, $lastName, $phoneNumber);
-				//enter data into database
+				echo $isValid;
+				//format data then enter data into database//
 			}
 			
-			
+	
 		//Validate form data
 		function Validation($firstName, $lastName, $phoneNumber){
 			//check if all fields have values
@@ -16,10 +17,8 @@
 				$isFirstName = ValidateName($firstName);
 				$isLastName = ValidateName($lastName);
 				$isPhoneNumber = ValidatePhone($phoneNumber);
-				
 				if ($notEmpty === true && $isFirstName === true && $isLastName === true && $isPhoneNumber === true)
 					return true;
-				
 				else 
 					return false;
 			}
@@ -38,24 +37,24 @@
 					}
 		}
 		
-		//Makes sure name doesn't have crazy symbols
+		//Makes sure name doesn't have crazy symbols (some might still slip through)
 		function ValidateName($name){
-			
-			If (@preg_match(['^.+$'], $name))
+		If (@preg_match('/^.+$/', $name))
 				return true;
 			else {
-				echo "font color='red'>" . $name . " is not a valid name. Please enter a valid name.";
+				echo "<font color='red'>" . $name . " is not a valid name. Please enter a valid name.</font>";
 				return false;
 			}
 		}
 		
-		//validate the phone number
+		//validates the phone number
 		function ValidatePhone($phone){
-			if (@preg_match(['\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'], $phone))
+			if (@preg_match('/\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/', $phone))
 				return true;
 			else{ 
-				echo "font color='red'>" . $phone . " is not a valid phone number. Please enter a valid phone number.";
+				echo "<font color='red'>" . $phone . " is not a valid phone number. Please enter a valid phone number.</font>";
 				return false;
 			}
 		}
+		
 	?>
