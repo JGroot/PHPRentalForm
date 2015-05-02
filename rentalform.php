@@ -6,6 +6,7 @@
          	<p><span>First Name</span><input type="text" name="fname" /></p>
             <p><span>Last Name</span><input type="text" name="lname" /></p>
             <p><span>Phone Number</span><input type="text" name="phonenumber" value="###-###-####" /></p>
+			<p><span># of Days to Rent</span><input type="text" name="numDaysToRent" /></p>
 			
 			 <!-- populate the dropdown list from db on load -->
 			<p><span>Vehicle</span>
@@ -20,7 +21,6 @@
             	{
             		echo "<option value='{$records['rentalType']}'>{$records['rentalType']}</option>";
             	}
-            	mysql_close($conn);
             ?>
      		</select></p>
             <p><span>Purchase insurance?</span>
