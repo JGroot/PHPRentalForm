@@ -11,7 +11,7 @@
 			include 'rentalform.php';
 		}
 		else if($_GET['page'] == "home"){
-			include 'home.html';
+			include 'home.php';
 		}
 		else if($_GET['page'] == "contact"){
 			include 'contact.php';
