@@ -1,3 +1,4 @@
+ <div class="content">
  <?php
 		// Check if the submit button has been pressed
 		if(isset($_POST['submit'])){
@@ -100,3 +101,4 @@
 		
 		
 	?>
+</div>

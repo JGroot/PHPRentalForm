@@ -1,7 +1,7 @@
 
 	<div class="content">
       <h2>Please complete the form below:</h2>
-         <form name="rentalform" action="index.php?page=rentalform" method="post">
+         <form name="rentalform" action="index.php?page=processRental" method="post">
           <div class="form_settings">
          	<p><span>First Name</span><input type="text" name="fname" /></p>
             <p><span>Last Name</span><input type="text" name="lname" /></p>
@@ -29,10 +29,6 @@
           </div>
         </form>
       
-    
-        <?php 
-        include ('processRental.php');
-		?>
 
 
   </div>
