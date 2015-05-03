@@ -2,8 +2,8 @@
    		<div><h1>Welcome to Eclipse Rentals</h1></div>
        <form action="index.php?page=home" method="post">
 		<div class="form_settings">
-			<p><span>Search Customers</span><input type="text" name="cSearch" /></p>
-			<input type="submit" name="Search"/>
+			<p style="width:80%"> <span>Search Customers</span><input type="text" name="cSearch" /></p>
+			<input type="submit" value="Search" style="width:15%; float:left"/>
 			<p>
 			<table style="width:100%">
 				<tr>
