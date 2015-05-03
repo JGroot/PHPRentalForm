@@ -1,3 +1,4 @@
+<div class="content">
 <?php
 /* Set e-mail recipient */
 $myemail = "jg105@zips.uakron.edu";
@@ -60,4 +61,7 @@ function show_error($myError)
 <?php
 exit();
 }
+include 'mailer.php';
 ?>
+
+</div>
