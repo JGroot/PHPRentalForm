@@ -10,7 +10,7 @@
 				<input type="text" name="subject" />
 				<p>Message:</p>
 				<textarea name="message"></textarea></p>
-				<input class="send" type="submit" value="Send">
+				<p style="padding-top: 15px"><input class="send" type="submit" value="Send"></p>
 			</form>
 		</div>
      </div>
