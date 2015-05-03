@@ -29,6 +29,8 @@
 				if (!$result)
 					die("Could not rent car: " . mysql_error());
 				else
+					$updateCarInformationSQL = "UPDATE Cars SET quantity = quantity - 1 WHERE rentalType = '" . $selectedVehicleType . "'";
+					mysql_query($updateCarInformationSQL, $conn);
 					echo "Car rented successfully!<br /><br />";
 					echo "Name: " . $firstName . " " . $lastName . "<br />";
 					echo "Rental Type: " . $selectedVehicleType . "<br />";
