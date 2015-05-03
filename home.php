@@ -24,6 +24,21 @@
 						."Number of Days: {$records['numOfDays']} <br />";
 					}
 			}
+			else{
+				$searchQuery = "SELECT * FROM rentals";
+				$result = mysql_query($searchQuery, $conn);
+				
+				if (!$result){
+						die("Could not get results: " . mysql_error());
+						}
+					while($records = mysql_fetch_array($result, MYSQL_ASSOC))
+					{
+					echo "Rental ID: {$records['rentalID']} &nbsp;"
+						."Rental Type: {$records['rentalType']} &nbsp;"
+						."Customer Name: {$records['CustomerName']} &nbsp;"
+						."Number of Days: {$records['numOfDays']} <br />";
+					}
+			}
 			?>
 			</p>
 		</div>
