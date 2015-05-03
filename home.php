@@ -14,6 +14,7 @@
 				
 				if (!$result)
 						die("Could not get results: " . mysql_error());
+						echo "No results found";
 					while($records = mysql_fetch_array($result, MYSQL_ASSOC))
 					{
 					echo "Rental ID: {$records['rentalID']} &nbsp;"
