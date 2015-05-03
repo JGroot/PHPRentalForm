@@ -19,7 +19,7 @@
 					die("Could not get results: " . mysql_error());
             	while($records = mysql_fetch_array($result, MYSQL_ASSOC))
             	{
-            		echo "<option value='{$records['rentalType']}'>{$records['rentalType']}</option>";
+            		echo "<option value='{$records['rentalType']}'>{$records['rentalType']} - {$records['quantity']} Available</option>";
             	}
             ?>
      		</select></p>
