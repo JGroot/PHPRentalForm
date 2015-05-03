@@ -3,7 +3,7 @@
 if(isset($_POST['submit'])){
 	/* Set e-mail recipient */
 	$myemail = "jg105@zips.uakron.edu";
-	
+	echo $myemail;
 	/* Check all form inputs using check_input function */
 	$name = check_input($_POST['name'], "Enter your name");
 	$subject = check_input($_POST['subject'], "Enter a subject");
@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
 	{
 	show_error("E-mail address not valid");
 	}
-	/* Let's prepare the message for the e-mail */
+	/* message for the e-mail */
 	$message = "
 	
 	Name: $name
@@ -29,12 +29,14 @@ if(isset($_POST['submit'])){
 	
 	/* Send the message using mail() function */
 	mail($myemail, $subject, $message);
+	if($mail){
+		echo "Thank you for submission.  A representative will contact you shortly";
+	}else{
+		echo "Mail sending failed.";
+	}
 	
-	/* Redirect visitor to the thank you page */
-	header('Location: thanks.html');
-	exit();
 	
-	/* Functions we used */
+	/* Functions */
 	function check_input($data, $problem='')
 	{
 	$data = trim($data);
