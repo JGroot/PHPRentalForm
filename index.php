@@ -18,7 +18,7 @@
 		}
 	}
 	else{
-		include 'home.html';
+		include 'home.php';
 	}
 	
 	
