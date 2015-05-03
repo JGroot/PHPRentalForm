@@ -16,6 +16,9 @@
 		else if($_GET['page'] == "contact"){
 			include 'contact.php';
 		}
+		else if($_GET['page'] == "about"){
+			include 'about.html';
+		}
 	}
 	else{
 		include 'home.php';
