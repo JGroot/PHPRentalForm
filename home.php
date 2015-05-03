@@ -5,6 +5,13 @@
 			<p><span>Search Customers</span><input type="text" name="cSearch" /></p>
 			<input type="submit" name="Search"/>
 			<p>
+			<table style="width:100%">
+				<tr>
+					<td>Rental ID</td>
+					<td>Rental Type</td>
+					<td>Customer Name</td>
+					<td>Number of Days</td>
+				</tr>
 			<?php
 			if(isset($_POST['cSearch']))
 			{
@@ -18,10 +25,12 @@
 						}
 					while($records = mysql_fetch_array($result, MYSQL_ASSOC))
 					{
-					echo "Rental ID: {$records['rentalID']} &nbsp;"
-						."Rental Type: {$records['rentalType']} &nbsp;"
-						."Customer Name: {$records['CustomerName']} &nbsp;"
-						."Number of Days: {$records['numOfDays']} <br />";
+					echo "<tr>
+					<td>{$records['rentalID']}</td>
+					<td>{$records['rentalType']}</td>
+					<td>{$records['CustomerName']}</td>
+					<td>{$records['numOfDays']}</td>
+					</tr>";
 					}
 			}
 			else{
@@ -33,13 +42,16 @@
 						}
 					while($records = mysql_fetch_array($result, MYSQL_ASSOC))
 					{
-					echo "Rental ID: {$records['rentalID']} &nbsp;"
-						."Rental Type: {$records['rentalType']} &nbsp;"
-						."Customer Name: {$records['CustomerName']} &nbsp;"
-						."Number of Days: {$records['numOfDays']} <br />";
+					echo "<tr>
+					<td>{$records['rentalID']}</td>
+					<td>{$records['rentalType']}</td>
+					<td>{$records['CustomerName']}</td>
+					<td>{$records['numOfDays']}</td>
+					</tr>";
 					}
 			}
 			?>
+			</table>
 			</p>
 		</div>
        </form>
