@@ -31,7 +31,7 @@
  
 		Unzip the folder contents into the webserver's htdoc
 		folder. Open the dbconn.php file into a text editor and 
-		change lines 7, 8, and 9 into your localhost, sql user
+		change lines 5, 6, and 7 into your localhost, sql user
 		name, and password respectively.
 		
 			Example:
@@ -39,7 +39,7 @@
 			//Change this to your localhost settings
 			$Server = "127.0.0.1";
 			$User = "root";
-			$Pass = "password";
+			$Pass = "root";
 			//************************************//
 
 ------------------------------------------------------------------			
