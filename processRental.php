@@ -32,7 +32,7 @@
 				else
 					$updateCarInformationSQL = "UPDATE Cars SET quantity = quantity - 1 WHERE rentalType = '" . $selectedVehicleType . "'";
 					mysql_query($updateCarInformationSQL, $conn);
-					echo "Car rented successfully!<br /><br />";
+					echo "<h3>Car rented successfully!</h3>";
 					echo "Name: " . $firstName . " " . $lastName . "<br />";
 					echo "Rental Type: " . $selectedVehicleType . "<br />";
 					echo "# of Days: " . $numDaysToRent . "<br />";
@@ -61,7 +61,7 @@
 		//checks if form fields are empty
 		function NotEmpty($firstName, $lastName, $phoneNumber, $numDaysToRent) {
 			if ($firstName == '' || $lastName == '' || $phoneNumber == '' || $numDaysToRent == ''){
-				echo '<p><font color="red">Please complete all fields.</font></p>';
+				echo '<p><font color="red">Please complete all fields.</font></p></br>';
 				return false;
 			}
 			else {
@@ -74,7 +74,7 @@
 			if (@preg_match('/^.+$/', $name))
 				return true;
 			else {
-				echo "<font color='red'>" . $name . " is not a valid name. Please enter a valid name.</font>";
+				echo "<p><font color='red'>" . $name . " is not a valid name. Please enter a valid name.</font></p></br>";
 				return false;
 			}
 		}
@@ -84,7 +84,7 @@
 			if (@preg_match('/\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/', $phone))
 				return true;
 			else { 
-				echo "<font color='red'>" . $phone . " is not a valid phone number. Please enter a valid phone number.</font>";
+				echo "<p><font color='red'>" . $phone . " is not a valid phone number. Please enter a valid phone number.</font></p></br>";
 				return false;
 			}
 		}
@@ -94,7 +94,7 @@
 			if (is_numeric($numDays))
 				return true;
 			else {
-				echo "<font color='red'>" . $numDays . " is not a valid number of days. Please enter a valid number.</font>";
+				echo "<p><font color='red'>" . $numDays . " is not a valid number of days. Please enter a valid number.</font></p></br>";
 				return false;
 			}
 		}
